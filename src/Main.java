@@ -71,16 +71,10 @@ public class Main {
     }
 
     public static void showContact(){
-        int currentIndex;
-        do {
-            currentIndex = 0;
-            if (anchorIndex == contacts.size()) break;
-            for (int i = anchorIndex; i < contacts.size(); i++) {
-                System.out.println(contacts.get(i).toString());
-                currentIndex++;
-                anchorIndex = i;
-            }
-        } while (currentIndex < 6);
+        for (Contact contact : contacts) {
+            System.out.println(contact.toString());
+        }
+        mainMenu();
     }
 
     public static void addNewContact(){
